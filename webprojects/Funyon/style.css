@@ -1,0 +1,119 @@
+/* Base styles — Mobile-first approach */
+
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff8f0;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background: #f57c00;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation styles for mobile */
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  display: block; /* Stack vertically on small screens */
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+/* Section styling for each story */
+section {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Make images responsive */
+section img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+}
+
+/* Footer styles */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* =========================== */
+/* Breakpoint 1: 576px */
+/* Adds horizontal nav + spacing adjustments */
+@media (min-width: 576px) {
+  body {
+    background-color: #f0f0f0; /* Slight background change */
+  }
+
+  nav a {
+    display: inline-block; /* Horizontal nav links */
+    margin: 0 0.5rem;
+    background: #e65100;
+    border-radius: 4px;
+  }
+
+  section {
+    padding: 2rem; /* More padding for larger screens */
+  }
+}
+
+/* =========================== */
+/* Breakpoint 2: 720px */
+/* Align header/nav differently + float images */
+@media (min-width: 720px) {
+  header {
+    text-align: left;
+    padding: 2rem;
+  }
+
+  nav {
+    text-align: right;
+    margin-top: -2rem; /* Pull nav up next to header */
+  }
+
+  section img {
+    float: right; /* Float image to the right of text */
+    width: 200px; /* Set fixed image width */
+    margin-left: 1rem;
+  }
+
+  section {
+    overflow: auto; /* Clear float for clean layout */
+  }
+}
+
+/* =========================== */
+/* Breakpoint 3: 992px */
+/* Add layout polish and increase spacing */
+@media (min-width: 992px) {
+  main {
+    width: 80%;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow box */
+  }
+
+  section {
+    display: block;
+    padding: 3rem;
+    font-size: 1.2rem; /* Slightly larger text */
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 2rem;
+  }
+}

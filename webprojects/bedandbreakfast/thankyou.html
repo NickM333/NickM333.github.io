@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You - Willow Creek Inn</title>
+  <!-- Link to styles and Font Awesome -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- JavaScript to extract and print submitted form data -->
+  <script>
+    function printQuery() {
+      const query = window.location.search.substring(1);
+      const params = new URLSearchParams(query);
+
+      document.getElementById("output").innerHTML = "";
+      for (const [key, value] of params.entries()) {
+        const line = `<p><strong>${decodeURIComponent(key)}:</strong> ${decodeURIComponent(value)}</p>`;
+        document.getElementById("output").innerHTML += line;
+      }
+    }
+  </script>
+</head>
+
+<!-- Trigger JavaScript on page load -->
+<body onload="printQuery()">
+
+  <!-- Shared navigation bar -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="request.html">Request Info</a>
+  </nav>
+
+  <!-- Message and output area for submitted data -->
+  <main class="container">
+    <h2>Thank you for reaching out to Willow Creek Inn!</h2>
+    <p>Here is the information you submitted:</p>
+    <div id="output"></div>
+  </main>
+
+</body>
+</html>

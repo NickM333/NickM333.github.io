@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Info - Willow Creek Inn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Shared navigation bar -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="request.html">Request Info</a>
+  </nav>
+
+  <main>
+    <h2>Request More Information</h2>
+
+    <!-- Info request form using GET method -->
+    <form method="get" action="thankyou.html">
+      <!-- Required name fields -->
+      <label>First Name: <input type="text" name="firstName" required></label><br>
+      <label>Last Name: <input type="text" name="lastName" required></label><br>
+
+      <!-- Email and phone fields -->
+      <label>Email: <input type="email" name="email"></label><br>
+      <label>Phone: <input type="tel" name="phone"></label><br>
+
+      <!-- Contact method dropdown -->
+      <label>Best Way to Reach You:
+        <select name="contactMethod">
+          <option>Email</option>
+          <option>Phone</option>
+          <option>Owl</option>
+        </select>
+      </label><br>
+
+      <!-- Checkboxes for amenities -->
+      <p>Amenities of Interest:</p>
+      <label><input type="checkbox" name="amenities" value="Fireplace"> Fireplace</label>
+      <label><input type="checkbox" name="amenities" value="Pet-friendly"> Pet-friendly</label>
+      <label><input type="checkbox" name="amenities" value="Walking Trails"> Walking Trails</label><br>
+
+      <!-- Radio buttons for stay preference -->
+      <p>Preferred Stay:</p>
+      <label><input type="radio" name="stay" value="Weekend"> Weekend</label>
+      <label><input type="radio" name="stay" value="Weekday"> Weekday</label>
+      <label><input type="radio" name="stay" value="Flexible"> Flexible</label><br>
+
+      <!-- Optional comments -->
+      <label>Comments:<br>
+        <textarea name="comments" rows="4" cols="40"></textarea>
+      </label><br>
+
+      <!-- Submit button with Font Awesome icon -->
+      <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+    </form>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* General page styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky top navigation bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/* Banner styling with positioned overlay text */
+.banner {
+  position: relative;
+  background: url('images/banner.jpg') no-repeat center center/cover;
+  height: 300px;
+  color: white;
+  text-align: center;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+/* Table styles for rooms.html */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Form layout */
+form {
+  width: 60%;
+  margin: 20px auto;
+}
+
+/* Thumbnail image styling */
+.thumbnail {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+/* Optional container class for layout consistency */
+.container {
+  padding: 20px;
+  text-align: center;
+}
